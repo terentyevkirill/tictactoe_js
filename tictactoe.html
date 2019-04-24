@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Крестики-нолики</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="game">
+    <table>
+        <tr>
+            <td class="cell" id="0"></td>
+            <td class="cell" id="1"></td>
+            <td class="cell" id="2"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="3"></td>
+            <td class="cell" id="4"></td>
+            <td class="cell" id="5"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="6"></td>
+            <td class="cell" id="7"></td>
+            <td class="cell" id="8"></td>
+        </tr>
+    </table>
+    <div class="endgame">
+        <div class="text"></div>
+    </div>
+    <div class="selectGameType">
+        <p>Выберите тип игры: </p>
+        <button onClick="chooseGameType('Игра вдвоем');">Игра вдвоем</button>
+        <button onClick="chooseGameType('Игра с компьютером');">Игра с компьютером</button>
+    </div>
+    <div class="selectSym">
+        <p>Выберите символ: </p>
+        <button onClick="selectSym('X')">X</button>
+        <button onClick="selectSym('O')">O</button>
+    </div>
+</div>
+
+<button onClick="startGame()">Начать заново</button>
+<script src="script.js"></script>
+
+</body>
+</html>
