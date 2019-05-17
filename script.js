@@ -32,11 +32,14 @@ function selectSym(sym) {
     }
     // прячем окно для выбора символа
     document.querySelector('.selectSym').style.display = "none";
+    setEventListeners(cells);
+}
+
+function setEventListeners(cells) {
     for (let i = 0; i < cells.length; i++) {
         cells[i].addEventListener('click', turnClick, false);
     }
 }
-
 function chooseGameType(gameType) {
     isGameWithAI = gameType === 'Игра с компьютером';
     document.querySelector('.selectGameType').style.display = "none";
@@ -44,9 +47,7 @@ function chooseGameType(gameType) {
         // показываем окно для выбора символа
         document.querySelector('.selectSym').style.display = "block";
     } else {
-        for (let i = 0; i < cells.length; i++) {
-            cells[i].addEventListener('click', turnClick, false);
-        }
+        setEventListeners(cells);
     }
 }
 
